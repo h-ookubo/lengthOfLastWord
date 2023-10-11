@@ -7,8 +7,7 @@ class Solution:
         removeLastSpace = s.rstrip()
 
         #スペースを基準にする
-        space = ' '
-        basedOnSpace = removeLastSpace.split(space)
+        basedOnSpace = removeLastSpace.split()
 
         #最後のスペースの後にある単語のみを代入する
         lastWord = basedOnSpace[-1]
