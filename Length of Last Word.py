@@ -27,7 +27,7 @@ class Solution:
         #sを一文字ずつiに代入して繰り返す
         for i in s :
             #iがa～zの文字もしくはスペースだった場合はtrue
-            if i == 'a' or 'b' or 'c' or 'd' or 'e' or 'f' or 'g' or 'h' or 'i' or 'j' or 'k' or 'l' or 'm' or 'n' or 'o' or 'p' or 'q' or 'r' or 's' or 't' or 'u' or 'v' or 'w' or 'x' or 'y' or 'z' or ' ' :
+            if i == 'a' or i == 'b' or i == 'c' or i == 'd' or i == 'e' or i == 'f' or i == 'g' or i == 'h' or i == 'i' or i == 'j' or i == 'k' or i == 'l' or i == 'm' or i == 'n' or i == 'o' or i == 'p' or i == 'q' or i == 'r' or i == 's' or i == 't' or i == 'u' or i == 'v' or i == 'w' or i == 'x' or i == 'y' or i == 'z' or i == ' ' :
                 count += 1
                 previousNCMCS = numCharMinCountSpace
                 #iがspaceと同じだった場合はtrue
@@ -76,17 +76,15 @@ print("コンプリート!本番テストへ")
 
         #sを一文字ずつiに代入して繰り返す
         for i in s :
-            #iがa～zの文字もしくはスペースだった場合はtrue
-            if i == 'a' or 'b' or 'c' or 'd' or 'e' or 'f' or 'g' or 'h' or 'i' or 'j' or 'k' or 'l' or 'm' or 'n' or 'o' or 'p' or 'q' or 'r' or 's' or 't' or 'u' or 'v' or 'w' or 'x' or 'y' or 'z' or ' ' :
-                count += 1
-                #iがspaceと同じだった場合はtrue
-                #それ以外はfalse、(1)へ
-                if i == space:
-                    countToSpace = count
-                #(1)
-                else:
-                    numCharWord = count
-                    numCharLastWord = numCharWord - countToSpace
+            count += 1
+            #iがspaceと同じだった場合はtrue
+            #それ以外はfalse、(1)へ
+            if i == space:
+                countToSpace = count
+            #(1)
+            else:
+                numCharWord = count
+                numCharLastWord = numCharWord - countToSpace
         #値を引数に返す
         return numCharLastWord
 """
