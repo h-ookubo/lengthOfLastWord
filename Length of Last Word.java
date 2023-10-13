@@ -10,6 +10,15 @@ class Solution {
 
     public int lengthOfLastWord(String s) {
       // ここにコードを書いてください
+      for(int i = 0 ; i<10;i++){
+      //ループ文のテンプレート
+      }
+      
+      "abcde".charAt(3);  //"abcde"文字列の3+1文字目を取り出す
+      "abcde".length(); //文字列の長さを取得
+
+
+
       return 0;
     }
 }
