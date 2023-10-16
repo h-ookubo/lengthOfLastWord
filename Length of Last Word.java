@@ -14,23 +14,48 @@ class Solution {
 
     public int lengthOfLastWord(String s) {
       // ここにコードを書いてください
-      int test1;
-      char test2;
-      String test3 = s;
-      char test4 = test3.charAt(3);
-      int test5 = test3.length();
-      for(int i = 0 ; i<10;i++){
-      //ループ文のテンプレート
-      //System.out.println(test3);
-      //System.out.println(test4);
-      //System.out.println(test5);
-      }
+
+      //カウントするための変数
+      int count = 0;
+
+      //スペースを代入するための変数
+      String space = " ";
+
+      //文字列の前後のスペースを削除するための変数
+      String frontAndRearSpacesExcluded = s.strip();
+
+      //文字列全体の文字数をカウントする変数
+      int oneSentence = frontAndRearSpacesExcluded.length();
+
+      //次のスペースまでをカウントするための変数
+      int countToSpace = 0;
+
+      //ループするたびにカウントに応じたcount番目の文字を代入するための変数
+      char charCount = 0;
+
+      //一番最後に出てきた単語の文字数のみを代入するための変数
+      int numCharLastWord = 0;
       
-      //"abcde".charAt(3);  //"abcde"文字列の3+1文字目を取り出す
-      //"abcde".length(); //文字列の長さを取得
+      //文字列の文字数分まで繰り返すループ文
+      for(int i = 0 ; i<frontAndRearSpacesExcluded.length(); i++){
+        charCount = frontAndRearSpacesExcluded.charAt(count);
 
+        //ループするたびにカウントを＋１する
+        count += 1;
 
+        //文字(char型)をString型に変更する
+        String stringCount = String.valueOf(charCount);
 
-      return test5;
+        //stringCountがspaceと同じだった場合はTrue
+          if(stringCount.equals(space)){
+
+            //countToSpaceにcountを代入する
+            countToSpace = count;
+          }
+        numCharLastWord = oneSentence - countToSpace;
+      }
+
+      //値を引数に返す
+      return numCharLastWord;
     }
 }
