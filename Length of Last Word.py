@@ -26,8 +26,8 @@ class Solution:
 
         #sを一文字ずつiに代入して繰り返す
         for i in s :
-            #iがa～zの文字もしくはスペースだった場合はtrue
-            if i == 'a' or i == 'b' or i == 'c' or i == 'd' or i == 'e' or i == 'f' or i == 'g' or i == 'h' or i == 'i' or i == 'j' or i == 'k' or i == 'l' or i == 'm' or i == 'n' or i == 'o' or i == 'p' or i == 'q' or i == 'r' or i == 's' or i == 't' or i == 'u' or i == 'v' or i == 'w' or i == 'x' or i == 'y' or i == 'z' or i == ' ' :
+            #iが文字列だった場合、もしくはスペースだった場合はtrue
+            if i == '' or ' ' :
                 count += 1
                 previousNCMCS = numCharMinCountSpace
                 #iがspaceと同じだった場合はtrue
